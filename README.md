@@ -16,5 +16,5 @@ This addon only runs server-side. No need to add to a collection.
 
 If you'd like, place these variables inside your `server.cfg` file.
 
-* `msp_protect_length` - How long should players be protected after the round starts?
+* `msp_protect_length` - How long (in seconds) should players be protected after the round starts?
   * Default: 15

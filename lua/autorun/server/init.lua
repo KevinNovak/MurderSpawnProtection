@@ -5,7 +5,7 @@ local cfgProtectLength =
     "msp_protect_length",
     15,
     bit.bor(FCVAR_NOTIFY),
-    "How long should players be protected after the round starts?"
+    "How long (in seconds) should players be protected after the round starts?"
 )
 
 local protectLength = cfgProtectLength:GetInt()
