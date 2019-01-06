@@ -10,9 +10,12 @@ local cfgProtectLength =
 
 local protectLength = cfgProtectLength:GetInt()
 
-function MSP:StartProtectingAllPlayers()
+-- How long before players become unfrozen
+local frozenTime = 10
+
+function MSP:StartProtectingAllPlayers(time)
     for key, ply in pairs(player.GetAll()) do
-        MSP:StartTimedProtection(ply)
+        MSP:StartTimedProtection(ply, time)
     end
 end
 
@@ -22,7 +25,7 @@ function MSP:StopProtectingAllPlayers()
     end
 end
 
-function MSP:StartTimedProtection(ply)
+function MSP:StartTimedProtection(ply, time)
     if not IsValid(ply) then
         return
     end
@@ -30,7 +33,7 @@ function MSP:StartTimedProtection(ply)
     MSP:ProtectPlayer(ply, true)
 
     timer.Simple(
-        protectLength,
+        time,
         function()
             MSP:ProtectPlayer(ply, false)
         end
@@ -43,12 +46,10 @@ function MSP:ProtectPlayer(ply, protect)
     end
 
     if protect then
-        print("Started Protecting '" .. ply:GetName() .. "' at " .. CurTime())
         ply:GodEnable()
         ply.GodEnabled = true
         ply:SetMaterial("models/wireframe")
     else
-        print("Stopped Protecting '" .. ply:GetName() .. "' at " .. CurTime())
         ply:GodDisable()
         ply.GodEnabled = false
         ply:SetMaterial("")
@@ -59,7 +60,8 @@ hook.Add(
     "OnStartRound",
     "MurderSpawnProtection",
     function()
-        MSP:StartProtectingAllPlayers()
+        local time = frozenTime + protectLength
+        MSP:StartProtectingAllPlayers(time)
     end
 )
 
