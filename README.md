@@ -17,7 +17,7 @@ See the **Configuration** section to adjust these values.
 This addon only runs server-side. No need to add to a collection.
 
 1. Install the above requirements.
-2. [Subscribe to this addon](https://steamcommunity.com/sharedfiles/filedetails/?id=1617160394).
+2. [Subscribe to this addon](https://steamcommunity.com/sharedfiles/filedetails/?id=1617160394) with Garry's Mod open..
 3. Locate the Murder Spawn Protection gma file in your steam install directory, under `steamapps\common\GarrysMod\garrysmod\addons`.
 4. Move the gma file into your servers `garrysmod\addons` folder.
 
