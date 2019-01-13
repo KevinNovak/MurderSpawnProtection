@@ -1,4 +1,4 @@
-### Description
+## Description
 
 ![Murder Spawn Protection](https://i.imgur.com/hh3pRyn.png)
 
@@ -8,11 +8,11 @@ By default, players will be protected for the first 15 seconds of the round and 
 
 See the **Configuration** section to adjust these values.
 
-### Requirements
+## Requirements
 
 1. [Murder](https://steamcommunity.com/sharedfiles/filedetails/?id=187073946) by [Mechanical Mind](https://steamcommunity.com/id/mechanicalmind)
 
-### Installation
+## Installation
 
 This addon only runs server-side. No need to add to a collection.
 
@@ -21,7 +21,7 @@ This addon only runs server-side. No need to add to a collection.
 3. Locate the Murder Spawn Protection gma file in your steam install directory, under `steamapps\common\GarrysMod\garrysmod\addons`.
 4. Move the gma file into your servers `garrysmod\addons` folder.
 
-### Configuration
+## Configuration
 
 If you'd like, place these variables inside your `server.cfg` file.
 
