@@ -2,7 +2,7 @@
 
 ![Murder Spawn Protection](https://i.imgur.com/hh3pRyn.png)
 
-Provides spawn protection at the beginning of Murder rounds.
+Provides spawn protection at the beginning of Murder (a Garry's Mod gamemode) rounds.
 
 By default, players will be protected for the first 15 seconds of the round and will appear as wireframe models.
 
